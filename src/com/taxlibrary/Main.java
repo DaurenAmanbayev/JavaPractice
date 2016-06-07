@@ -5,7 +5,22 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
         //ArrayTest();
-        Compare(45,56,"Google", "Facebook");
+       // Compare(45,56,"Google", "Facebook");
+        StringTest();
+
+    }
+    static void StringTest()
+    {
+       // StringExp exp=new StringExp();
+        //true
+        System.out.print(StringExp.StringImmutable("Masha", "Masha"));//usage static methods
+        String b1="Sasha";
+        String b2="Sasha";
+        System.out.print(StringExp.StringImmutable(b1, b2));//true
+        String g1=new String("Masha");
+        String g2=new String("Masha");
+
+        System.out.print(StringExp.StringImmutable(g1, g2));//false
 
     }
 
