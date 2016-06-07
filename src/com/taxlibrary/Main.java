@@ -1,4 +1,7 @@
 package com.taxlibrary;
+import com.taxlibrary.Abstracts.*;
+
+
 
 public class Main {
 
@@ -7,7 +10,18 @@ public class Main {
         //ArrayTest();
        // Compare(45,56,"Google", "Facebook");
         //StringTest();
-        ClassesTest();
+       // ClassesTest();
+
+        TestAbstract();
+
+    }
+    static void TestAbstract()
+    {
+        Dog dg=new Dog("Gav", "Jack");
+        Cat cat=new Cat();
+
+        cat.Say();
+        dg.Say();
 
     }
     static void ClassesTest()
@@ -28,7 +42,7 @@ public class Main {
         emps[3]=wk2;
 
         for (Employee p: emps) {
-            if(p instanceof Contractor)
+            if(p instanceof Contractor)//instanceof -- очень затратная по ресурсам
             {
                 p.callToPerson("John");
             }
