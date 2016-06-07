@@ -13,6 +13,6 @@ public class Transport {
         return false;
     }
     public double calcTax() {
-        return super.calcTax()+650;
+        return 650;
     }
 }

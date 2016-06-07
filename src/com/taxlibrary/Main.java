@@ -6,6 +6,7 @@ public class Main {
         // write your code here
         //ArrayTest();
         Compare(45,56,"Google", "Facebook");
+
     }
 
     static void ArrayTest()
@@ -62,5 +63,20 @@ public class Main {
     {
         String compMessage=arg1<arg2? str1:str2;
         Print(compMessage+" win!!!");
+    }
+
+    static void ClassAndObjects()
+    {
+        Transport car1=new Transport();
+        Transport car2=new Transport();
+
+        car1.numberOfDoors=4;
+        car1.color="Grey";
+        car2.numberOfDoors=5;
+        car2.color="Blue";
+
+        System.out.println("I have painted my cars");
+        System.out.println("The color of car1 is "+ car1.color);
+        System.out.println("The color of car2 is "+ car2.color);
     }
 }
