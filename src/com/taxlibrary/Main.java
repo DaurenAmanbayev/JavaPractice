@@ -15,6 +15,7 @@ public class Main {
         TestAbstract();
 
     }
+    //полиморфизм можно использовать как с интерфейсами, так и с абстрактными классами
     static void TestAbstract()
     {
         Dog dg=new Dog("Gav", "Jack");
@@ -28,8 +29,7 @@ public class Main {
         pets[0]=dg;
         pets[1]=cat;
 
-        for (Pet p: pets
-             ) {
+        for (Pet p: pets) {
             p.Say();
         }
 
