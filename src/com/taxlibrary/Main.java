@@ -20,8 +20,18 @@ public class Main {
         Dog dg=new Dog("Gav", "Jack");
         Cat cat=new Cat();
 
-        cat.Say();
-        dg.Say();
+       // cat.Say();
+      //  dg.Say();
+
+        Pet[] pets=new Pet[2];
+        //Pet petya=new Pet("Cool");//НЕЛЬЗЯ!!!
+        pets[0]=dg;
+        pets[1]=cat;
+
+        for (Pet p: pets
+             ) {
+            p.Say();
+        }
 
     }
     static void ClassesTest()
