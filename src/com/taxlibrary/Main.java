@@ -6,8 +6,41 @@ public class Main {
         // write your code here
         //ArrayTest();
        // Compare(45,56,"Google", "Facebook");
-        StringTest();
+        //StringTest();
+        ClassesTest();
 
+    }
+    static void ClassesTest()
+    {
+        Employee emp=new Employee("John", "Silver", 21);
+        Workers worker=new Workers("James", "Bond",38);
+
+        Employee wk1=new Workers("Jina", "Grey", 25);
+        Employee wk2=new Contractor("Avatar", "Sun", 1000);
+        //Print(worker.GetName());
+       // Print(((Workers)wk1).GetName());
+       // Print(((Workers)emp).GetName());//ERROR!!!
+
+        Employee[] emps=new Employee[4];
+        emps[0]=emp;
+        emps[1]=worker;
+        emps[2]=wk1;
+        emps[3]=wk2;
+
+        for (Employee p: emps) {
+            if(p instanceof Contractor)
+            {
+                p.callToPerson("John");
+            }
+            else if(p instanceof  Workers)
+            {
+                Print(((Workers) p).GetName());//casting Workers
+            }
+            else
+            {
+                Print(p.toString());
+            }
+        }
     }
     static void StringTest()
     {
@@ -76,7 +109,7 @@ public class Main {
     }
     static void Compare(int arg1, int arg2, String str1, String str2)
     {
-        String compMessage=arg1<arg2? str1:str2;
+        String compMessage=arg1<arg2? str1:str2;//fast compare
         Print(compMessage+" win!!!");
     }
 
