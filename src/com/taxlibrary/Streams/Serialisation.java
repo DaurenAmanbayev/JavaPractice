@@ -17,7 +17,7 @@ public class Serialisation {
         ObjectOutputStream oOut=null;
 
         try{
-            fOut=new FileOutputStream("c:\\test.txt");
+            fOut=new FileOutputStream("e:\\test.txt");
             oOut=new ObjectOutputStream(fOut);
 
             oOut.writeObject(bike);//serialisation
@@ -36,11 +36,13 @@ public class Serialisation {
 
         try
         {
-            fIn=new FileInputStream("c:\\test.txt");
+            fIn=new FileInputStream("e:\\test.txt");
 
             oIn=new ObjectInputStream(fIn);
 
             Bike bike=(Bike) oIn.readObject();
+
+            System.out.println(bike.model);
         }
         catch (ClassNotFoundException cnf)
         {

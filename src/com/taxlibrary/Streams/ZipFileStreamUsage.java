@@ -15,7 +15,7 @@ public class ZipFileStreamUsage {
     {
         ZipEntry ze = null;
 
-        try (FileInputStream myFile = new FileInputStream("Lesson14.zip");
+        try (FileInputStream myFile = new FileInputStream("e:\\test.zip");
              BufferedInputStream buff = new BufferedInputStream(myFile);
              ZipInputStream zipFile = new ZipInputStream(buff);){
 

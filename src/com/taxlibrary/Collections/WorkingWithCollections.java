@@ -104,7 +104,7 @@ public class WorkingWithCollections {
 
 
         Customer customer = new Customer("David", "Lee");
-        Order order = new Order();
+        Order order = new Order("Jack", 250);
         Portfolio portfolio = new Portfolio();
         Map data = new Hashtable();
         data.put("Customer", customer);

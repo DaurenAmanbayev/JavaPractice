@@ -88,11 +88,11 @@ public class Javaiostreams {
     * для чтения буферизировано
     * преимущество скорость чтения
     * */
-    public static void BufferedFileReadExample() {
+    public static void BufferedFileReadExample(String path) {
         FileInputStream myFile = null;
         BufferedInputStream buff=null;
         try {
-            myFile = new FileInputStream("abc.dat");
+            myFile = new FileInputStream(path);
             buff=new BufferedInputStream(myFile);//создаем буфер для потока чтения файла
             boolean eof = false;
 
@@ -122,13 +122,13 @@ public class Javaiostreams {
         }
     }
     //read characters
-    public static  void StreamReader()
+    public static  void StreamReader(String path)
     {
         FileInputStream myFile = null;
         StringBuffer buffer=new StringBuffer();
         BufferedInputStream buff=null;
         try {
-            myFile = new FileInputStream("abc.dat");
+            myFile = new FileInputStream(path);
             InputStreamReader inputStreamReader=new InputStreamReader(myFile, "UTF8");
             Reader reader=new BufferedReader(inputStreamReader);
             int ch;
@@ -207,9 +207,9 @@ public class Javaiostreams {
         }
     }
     //try resourses
-    public static void FileIN()
+    public static void FileIN(String path)
     {
-        try (FileInputStream myFile = new FileInputStream("abc.dat")){
+        try (FileInputStream myFile = new FileInputStream(path)){
 
             boolean eof = false;
 

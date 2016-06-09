@@ -1,6 +1,7 @@
 package com.taxlibrary;
 import com.taxlibrary.Abstracts.*;
-
+import com.taxlibrary.Streams.Serialisation;
+import com.taxlibrary.Streams.ZipFileStreamUsage;
 
 
 public class Main {
@@ -8,14 +9,36 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
         //ArrayTest();
-       // Compare(45,56,"Google", "Facebook");
+        // Compare(45,56,"Google", "Facebook");
         //StringTest();
-       // ClassesTest();
-        TestAbstract();
+        // ClassesTest();
+        //TestAbstract();
+       // SerializeTest();
+        //ZipRead();
 
     }
 
-    //region <TEST METHODS>
+    //region <CLASS TEST METHODS>
+    static void SerializeTest()
+    {
+        try {
+            Serialisation.UseSerialisationWrite();
+            Thread.sleep(100);
+            Serialisation.UseSerialisationRead();
+        }
+        catch (Exception e)
+        {
+            Print("Someting wrong!");
+        }
+    }
+
+    static void ZipRead()
+    {
+        ZipFileStreamUsage.ZipFileUsage();
+    }
+    //endregion
+
+    //region <SIMPLE TEST METHODS>
     //полиморфизм можно использовать как с интерфейсами, так и с абстрактными классами
     static void TestAbstract()
     {
