@@ -1,5 +1,8 @@
 package com.taxlibrary;
 import com.taxlibrary.Abstracts.*;
+import com.taxlibrary.NetworkBasic.FileDownloader;
+import com.taxlibrary.NetworkBasic.StockQuote;
+import com.taxlibrary.NetworkBasic.StockQuoteServer;
 import com.taxlibrary.Streams.Serialisation;
 import com.taxlibrary.Streams.ZipFileStreamUsage;
 
@@ -15,7 +18,15 @@ public class Main {
         //TestAbstract();
        // SerializeTest();
         //ZipRead();
-
+       // StockDownload();
+        ServerStart();
+        try {
+            Thread.sleep(10000);
+        }
+        catch (Exception e)
+        {
+            Print(e.getMessage());
+        }
     }
 
     //region <CLASS TEST METHODS>
@@ -31,10 +42,20 @@ public class Main {
             Print("Someting wrong!");
         }
     }
-
     static void ZipRead()
     {
         ZipFileStreamUsage.ZipFileUsage();
+    }
+
+    static void StockDownload()
+    {
+        StockQuote.printStockQuote("csco");
+    }
+    //посмотреть веб сокеты --------------
+    //Java
+    static void ServerStart()
+    {
+        StockQuoteServer.Start();
     }
     //endregion
 

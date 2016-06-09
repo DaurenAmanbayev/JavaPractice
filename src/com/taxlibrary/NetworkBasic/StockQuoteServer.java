@@ -19,24 +19,25 @@ public class StockQuoteServer {
         try
         {
             // Create a server socket
-            serverSocket = new ServerSocket(3000);
+            serverSocket = new ServerSocket(3000);//создаем сокет для сервера с указанным портом
 
             System.out.println("Waiting for a quote request...");
             while (true)
             {
                 // Wait for a  request
-                client = serverSocket.accept();
+                client = serverSocket.accept();//запускам сокет, получаем клиента
 
                 // Get the streams
                 inbound=new BufferedReader(new
-                        InputStreamReader(client.getInputStream()));
-                outbound = client.getOutputStream();
+                        InputStreamReader(client.getInputStream()));//читаем входной поток
+                outbound = client.getOutputStream();//получаем выходный поток
 
                 String symbol = inbound.readLine();
 
                 //Generate a random stock price
                 String price= (new
                         Double(Math.random()*100)).toString();
+                //отправляем цену
                 outbound.write(("\n The price of "+symbol+
                         " is " + price + "\n").getBytes());
 

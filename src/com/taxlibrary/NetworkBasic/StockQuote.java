@@ -13,7 +13,7 @@ import java.util.StringTokenizer;
  */
 public class StockQuote {
 
-    static void printStockQuote(String symbol){
+    public static void printStockQuote(String symbol){
         String csvString;
         URL url = null;
         URLConnection urlConn = null;
