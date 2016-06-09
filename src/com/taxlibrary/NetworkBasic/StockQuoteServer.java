@@ -7,9 +7,6 @@ import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-/**
- * Created by ktoloc on 09.06.2016.
- */
 public class StockQuoteServer {
     public static void Start()
     {
@@ -59,6 +56,5 @@ public class StockQuoteServer {
                 System.out.println("StockQuoteServer: can't close streams" + e.getMessage());
             }
         }
-    }
     }
 }

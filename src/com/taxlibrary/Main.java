@@ -11,10 +11,11 @@ public class Main {
        // Compare(45,56,"Google", "Facebook");
         //StringTest();
        // ClassesTest();
-
         TestAbstract();
 
     }
+
+    //region <TEST METHODS>
     //полиморфизм можно использовать как с интерфейсами, так и с абстрактными классами
     static void TestAbstract()
     {
@@ -151,4 +152,5 @@ public class Main {
         System.out.println("The color of car1 is "+ car1.color);
         System.out.println("The color of car2 is "+ car2.color);
     }
+    //endregion
 }
