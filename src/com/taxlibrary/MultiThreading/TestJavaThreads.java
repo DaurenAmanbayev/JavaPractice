@@ -108,6 +108,7 @@ public class TestJavaThreads {
         System.out.println( "TestThreads2Lambda is finished");
     }
 
+    //протестировать и понять принцип работы, поэксперементировать!!!!
     public static void Thread3Lambda()
     {
 // Lambda expression for Market News

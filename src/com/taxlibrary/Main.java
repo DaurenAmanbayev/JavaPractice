@@ -1,10 +1,13 @@
 package com.taxlibrary;
 import com.taxlibrary.Abstracts.*;
+import com.taxlibrary.MultiThreading.NewsReaderGUI;
 import com.taxlibrary.NetworkBasic.FileDownloader;
 import com.taxlibrary.NetworkBasic.StockQuote;
 import com.taxlibrary.NetworkBasic.StockQuoteServer;
 import com.taxlibrary.Streams.Serialisation;
 import com.taxlibrary.Streams.ZipFileStreamUsage;
+
+import java.awt.*;
 
 
 public class Main {
@@ -19,14 +22,17 @@ public class Main {
        // SerializeTest();
         //ZipRead();
        // StockDownload();
-        ServerStart();
+
+        /*ServerStart();
         try {
             Thread.sleep(10000);
         }
         catch (Exception e)
         {
             Print(e.getMessage());
-        }
+        }*/
+
+        NewsGUIRun();
     }
 
     //region <CLASS TEST METHODS>
@@ -50,6 +56,15 @@ public class Main {
     static void StockDownload()
     {
         StockQuote.printStockQuote("csco");
+    }
+
+    //----------------------------------------
+    //проверка запуска графического приложения
+    public static void NewsGUIRun()
+    {
+
+        EventQueue.invokeLater(() ->
+                new NewsReaderGUI().displayGUI());
     }
     //посмотреть веб сокеты --------------
     //Java
