@@ -1,5 +1,6 @@
 package com.taxlibrary;
 import com.taxlibrary.Abstracts.*;
+import com.taxlibrary.JDBC.EmployeeDB;
 import com.taxlibrary.MultiThreading.NewsReaderGUI;
 import com.taxlibrary.NetworkBasic.FileDownloader;
 import com.taxlibrary.NetworkBasic.StockQuote;
@@ -32,7 +33,9 @@ public class Main {
             Print(e.getMessage());
         }*/
 
-        NewsGUIRun();
+       // NewsGUIRun();
+
+        EmployeeDB.Select();
     }
 
     //region <CLASS TEST METHODS>
@@ -62,7 +65,6 @@ public class Main {
     //проверка запуска графического приложения
     public static void NewsGUIRun()
     {
-
         EventQueue.invokeLater(() ->
                 new NewsReaderGUI().displayGUI());
     }
@@ -187,7 +189,7 @@ public class Main {
         }
     }
 
-    static void Print(String str)
+    public static void Print(String str)
     {
         System.out.println(str);
     }
