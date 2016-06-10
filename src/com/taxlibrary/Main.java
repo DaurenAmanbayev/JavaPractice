@@ -35,7 +35,7 @@ public class Main {
 
        // NewsGUIRun();
 
-        EmployeeDB.Select();
+        EmployeeDB.TransactionUpdates();
     }
 
     //region <CLASS TEST METHODS>
