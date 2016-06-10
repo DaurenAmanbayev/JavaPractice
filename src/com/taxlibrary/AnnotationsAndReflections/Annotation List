@@ -1,0 +1,17 @@
+@Override
+@SupressWarning
+@Deprecated
+@Target
+@Retention
+@Documented
+@Inherited
+#FunctionalInterface
+
+java.lang
+java.annotation
+javax.annotation
+
+Custom Annotations
+==>
+
+почитать про рефлексию и понять принципы использования

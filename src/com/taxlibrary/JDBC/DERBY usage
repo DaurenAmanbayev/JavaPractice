@@ -12,4 +12,10 @@ DBMS Oracle link http://bit.ly/Qmkzpt
 
 Oracle SQL Developer http://bit.ly/1bAq4Y7
 
-OJDBC driver http://bit.ly/1d4rn1Z
+OJDBC driver http://bit.ly/1d4rn1Z\
+
+
+create table Employee (EMPNO int NOT NULL, ENAME varchar(50) NOT NULL, JOB_TITLE varchar(150) NOT NULL);
+
+
+insert into Employee values (736, 'John Smith', 'Clerk'), (7499, 'Joe Allen', 'Salesman'), (1521, 'Mary Luu', 'Director');
